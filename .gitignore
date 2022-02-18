@@ -25,3 +25,5 @@ yarn-error.log*
 #myown
 /src
 /public
+src
+public
