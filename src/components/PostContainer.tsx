@@ -8,7 +8,7 @@ export default function PostContainer() {
 	const{data:posts,error,isLoading,refetch} = postAPI.useFetchAllPostsQuery(limit);
 	const [createPost,{}] = postAPI.useCreatePostMutation()
 	const [updatePost,{}] = postAPI.useUpdatePostMutation()
-	const [deletePost,{}] = postAPI.useDeletePostMutation()
+	const [deletePost,{}] = postAPI.useDeletePostMutation()	
 
 
  
@@ -23,6 +23,7 @@ export default function PostContainer() {
 	const handleUpdate = (post:IPost) => {
 		updatePost(post)
 	}
+	console.log(posts);
 	return (
 		<div>
 		  <div className='post__list'>
